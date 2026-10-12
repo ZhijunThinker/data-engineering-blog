@@ -8,8 +8,9 @@ Hi, I'm a Data Engineer focusing on:
 - Apache Iceberg
 - AWS Cloud
 - Data Governance
+- SQL
 
-This repository records my learning journey and real-world engineering practices.
+This repository records my real-world engineering practices.
 
 ## Tech Stack
 
@@ -23,7 +24,6 @@ This repository records my learning journey and real-world engineering practices
 - Spark
 - Iceberg
 - Hive
-- Trino
 
 ### Workflow
 - Airflow
@@ -31,11 +31,3 @@ This repository records my learning journey and real-world engineering practices
 
 ### Cloud
 - AWS
-
-## Learning Roadmap
-
-2026
-- Master Lakehouse Architecture
-- Build Data Platform
-- Learn AWS Data Engineering
-- Improve English Communication

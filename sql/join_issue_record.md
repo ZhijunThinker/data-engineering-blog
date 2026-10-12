@@ -1,1 +1,1 @@
-# The mont common problems in the join operating in SQL
+# The most common problems in the join operation in SQL
