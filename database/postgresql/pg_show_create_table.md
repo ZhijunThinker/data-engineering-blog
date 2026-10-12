@@ -19,11 +19,11 @@ CREATE TABLE test(
 );
 ```
 Pg internally stores the following information:
-1.Database objects
-2.Field definition
-3.Field type
-4.Field constraint
-5.index
+1. Database objects
+2. Field definition
+3. Field type
+4. Field constraint
+5. index
 Stored in the system catalogs:
 ```sql
 pg_class
@@ -50,7 +50,7 @@ However,execute in the native PostgreSQL:
 ERROR: function pg_get_tabledef(regclass) does not exist
 ```
 this method only works in the Database developed based on the secondary utilization of the PostgreSQL database.
-3.Use "select" statement to get the table structure.This method is the most flexible,
+3. Use "select" statement to get the table structure.This method is the most flexible,
 Also,this is my favorite method.
 ```sql
 select 
