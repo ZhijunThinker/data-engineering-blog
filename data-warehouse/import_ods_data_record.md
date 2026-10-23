@@ -12,13 +12,17 @@ At First,you should confirm the source table have incremental field,For example,
 At first,you should create ods table with partition which is the incremental field.You Should load the data fully at first,then you load partial data by to the midle table,then you can oberwrite the ods table by the midle table,the preudo-code is as follows:
 ```sql
 //if target table is hive table
+SET hive.exec.dynamic.partition = true;
+SET hive.exec.dynamic.partition.mode = nonstrict;
 insert overwrite table ods_table partition (partition_field)
 select a,b,c,partition_field
 from mid_table
 // For an Iceberg table, the following is an illustrative example of dynamic partition overwrite
+SET spark.sql.sources.partitionOverwriteMode = dynamic;
 insert overwrite table ods_table
-select a,b,c,partition_field
-from mid_table
+select a,b,c,dt
+from mid_table;
+WHERE dt BETWEEN '2026-10-16' AND '2026-10-22';
 ```
 2. Use Merge Into Mode
 MERGE INTO is useful when the target table must support inserts and updates based on a business key.
